@@ -1,0 +1,24 @@
+@use "../../styles//variables.scss" as *;
+
+.card {
+    width: 18.75rem;
+    font-family: $font-secondary;
+    background-color: $color-grey-light;
+    color: $color-blue-navy-dark;
+    margin: 10px;
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        padding: 0.5rem 0;
+        margin: 0 0.25rem;
+    }
+
+    &__info {
+        padding: 0.5rem 0;
+        margin: 0 0.25rem;
+    }
+}

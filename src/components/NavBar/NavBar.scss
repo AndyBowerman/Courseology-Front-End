@@ -12,7 +12,7 @@
     &__item {
         padding: 0.5rem 2.5rem;
         display: inline;
-        color: $color-blue-navy-dark;
+        color: $color-white;
         font-weight: $font-weight-regular;
         font-family: $font-secondary;
         border-radius: 2px;
@@ -21,4 +21,23 @@
     &__item:hover {
         background-color: $color-white-smoke;
     }
+}
+
+.navbar__showcase {
+    width: 80%;
+    margin: auto;
+    text-decoration: none;
+    line-height: 4rem;
+    font-size: $font-size-large;
+    text-align: center;
+    font-family: $font-secondary;
+    font-weight: 300;
+    color: $color-blue-navy-dark;
+    list-style: none;
+
+    &--item:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        opacity: 0.9;
+    }
+
 }

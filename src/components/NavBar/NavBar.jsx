@@ -1,13 +1,13 @@
 import "./NavBar.scss";
 
-const NavBar = () => {
+const NavBar = ({styles, itemStyle}) => {
   return (
-    <ul className="navbar">
-        <li className="navbar__item">Home</li>
-        <li className="navbar__item">Courses</li>
-        <li className="navbar__item">Create Course</li>
-        <li className="navbar__item">Create Student</li>
-        <li className="navbar__item">About Us</li>
+    <ul className={styles}>
+        <li className={itemStyle}>Home</li>
+        <li className={itemStyle}>Courses</li>
+        <li className={itemStyle}>Create Course</li>
+        <li className={itemStyle}>Create Student</li>
+        <li className={itemStyle}>About Us</li>
     </ul>
   )
 }

@@ -1,9 +1,18 @@
 import './App.scss';
-import Showcase from './containers/Showcase/Showcase';
+import CardContainer from "./containers/CardContainer/CardContainer.jsx"
+import img from "./assets/maxresdefault.jpg";
 
 const App = () => {
+
+  const obj = [
+    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
+    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
+    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
+    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"}
+  ]
+
   return (
-    <Showcase />
+    <CardContainer obj={obj} />
   )
 }
 

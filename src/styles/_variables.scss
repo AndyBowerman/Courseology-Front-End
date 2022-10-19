@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend+Deca:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap');
+
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -19,7 +21,7 @@ $color-red-dark: #d92d20;
 //Grey colors
 $color-grey-dark: #7b7b7b;
 $color-grey-normal: #70788a;
-$color-grey-light: #b0b7c8;
+$color-grey-light: #f9f9f9;
 
 //Blue colors
 $color-blue-dark: #101828;
@@ -51,7 +53,7 @@ $font-weight-bold: 700;
 $letter-spacing: 160%;
 
 //font size:
-$font-size-largest: 2.5rem;
+$font-size-largest: 3.5rem;
 $font-size-extra-large: 2rem;
 $font-size-large: 1.75rem;
 $font-size-medium: 1.5rem;
@@ -62,3 +64,4 @@ $font-size-smallest: 0.65rem;
 // font-family
 $font-primary: "Lexend Deca", sans-serif;
 $font-secondary: "Inter", sans-serif;
+$font-headings: 'Baloo Tamma 2', cursive;

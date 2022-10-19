@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.card-container {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+}
