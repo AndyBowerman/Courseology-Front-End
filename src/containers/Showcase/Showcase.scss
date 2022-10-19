@@ -1,0 +1,22 @@
+@use "../../styles/variables.scss" as *;
+
+.showcase {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+
+
+  &__background {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__cover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: $color-black;
+    opacity: 0.6;
+  }
+}
