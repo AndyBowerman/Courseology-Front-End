@@ -13,14 +13,14 @@ public class Course {
     private String img;
     private String courseName;
     private String courseDescription;
-    private String duration;
+    private int duration; // in weeks
     private int price;
 
     public Course() {
 
     }
 
-    public Course(int id, String img, String courseName, String courseDescription, String duration, int price) {
+    public Course(int id, String img, String courseName, String courseDescription, int duration, int price) {
         this.id = id;
         this.img = img;
         this.courseName = courseName;
@@ -61,11 +61,11 @@ public class Course {
         this.courseDescription = courseDescription;
     }
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
