@@ -15,18 +15,20 @@ public class Course {
     private String courseDescription;
     private int duration; // in weeks
     private int price;
+    private boolean shortCourse;
 
     public Course() {
 
     }
 
-    public Course(int id, String img, String courseName, String courseDescription, int duration, int price) {
+    public Course(int id, String img, String courseName, String courseDescription, int duration, int price, boolean shortCourse) {
         this.id = id;
         this.img = img;
         this.courseName = courseName;
         this.courseDescription = courseDescription;
         this.duration = duration;
         this.price = price;
+        this.shortCourse = shortCourse;
     }
 
     public int getId() {
@@ -75,5 +77,13 @@ public class Course {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public boolean isShortCourse() {
+        return shortCourse;
+    }
+
+    public void setShortCourse(boolean shortCourse) {
+        this.shortCourse = shortCourse;
     }
 }

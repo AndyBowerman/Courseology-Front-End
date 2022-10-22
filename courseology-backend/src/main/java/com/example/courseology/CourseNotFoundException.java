@@ -1,5 +1,5 @@
 package com.example.courseology;
 
 public class CourseNotFoundException extends RuntimeException {
-    public CourseNotFoundException() { super("Course has not been found"); }
+    public CourseNotFoundException(String target) { super(target + " not found"); }
 }

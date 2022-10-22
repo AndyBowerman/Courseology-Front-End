@@ -11,15 +11,20 @@ import java.util.stream.Collectors;
 public class CourseService {
     @Autowired
     CourseRepository courseRepository;
+    TeacherRepository teacherRepository;
     public void addCourse(Course course) {
         courseRepository.save(course);
+    }
+
+    public void addTeacher(Teacher teacher) {
+        teacherRepository.save(teacher);
     }
 
     public List<Course> getCourseByCourseName(String courseName) {
         return courseRepository
                 .findAll()
                 .stream()
-                .filter(course -> course.getCourseName().contains(courseName))
+                .filter(course -> course.getCourseName().toLowerCase().contains(courseName.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
@@ -35,6 +40,14 @@ public class CourseService {
                 .collect(Collectors.toList());
     }
 
+    public List<Course> getShortCourses() {
+        return courseRepository
+                .findAll()
+                .stream()
+                .filter(course -> course.isShortCourse())
+                .collect(Collectors.toList());
+    }
+
     public List<Course> getCourseByPrice(int price) {
         return courseRepository
                 .findAll()
@@ -45,7 +58,7 @@ public class CourseService {
 
     public void updateCourse(Course newCourse, int id) {
         if(!courseRepository.existsById(id)) {
-            throw new CourseNotFoundException();
+            throw new CourseNotFoundException("Course");
         }
         courseRepository.save(newCourse);
     }
@@ -53,7 +66,7 @@ public class CourseService {
     @Transactional
     public void deleteCourseById(int id) {
         if(!courseRepository.existsById(id)) {
-            throw new CourseNotFoundException();
+            throw new CourseNotFoundException("Course");
         }
         courseRepository.deleteById(id);
     }

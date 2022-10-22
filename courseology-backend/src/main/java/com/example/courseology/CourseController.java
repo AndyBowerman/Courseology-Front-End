@@ -23,6 +23,12 @@ public class CourseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(course);
     }
 
+//    @PostMapping("/teacher")
+//    public ResponseEntity<Course> createTeacher(@RequestBody Teacher teacher) {
+//        courseService.addTeacher(teacher);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(teacher);
+//    }
+
     // READ
 
     // get all courses & by search term
@@ -40,6 +46,13 @@ public class CourseController {
     @GetMapping("/courses/duration")
     public ResponseEntity<List<Course>> getCourseByDuration(@RequestParam int duration) {
         return ResponseEntity.status(HttpStatus.OK).body(courseService.getCourseByDuration(duration));
+    }
+
+    // get only short courses
+
+    @GetMapping("/courses/shortCourse")
+    public ResponseEntity<List<Course>> getShortCourses() {
+        return ResponseEntity.status(HttpStatus.OK).body(courseService.getShortCourses());
     }
 
     // get course by price
