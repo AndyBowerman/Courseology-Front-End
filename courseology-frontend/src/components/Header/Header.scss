@@ -1,0 +1,14 @@
+@use "../../styles/variables.scss" as *;
+
+.header {
+    border-bottom: 0.25rem solid $color-blue-navy-dark;
+
+    &__text {
+        font-family: $font-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-largest;
+        text-align: center;
+        color: $color-blue-navy-dark;
+        letter-spacing: 0.3rem;
+    }
+}

@@ -1,0 +1,6 @@
+@use "./variables" as *;
+
+* {
+    color: $color-black;
+    font-family: "open sans", helvetica, arial, sans;
+  }

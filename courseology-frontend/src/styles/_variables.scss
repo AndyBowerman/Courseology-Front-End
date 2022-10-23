@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend+Deca:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Montserrat&display=swap');
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -8,10 +7,6 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
 $large-desktop-breakpoint: 1440px;
 $extra-large-desktop-breakpoint: 2560px;
-
-//colors
-$text-color: #f3f2e8;
-$background-color: #1f1b1b;
 
 //Red colors
 $color-red-light: #eb4444;
@@ -49,11 +44,8 @@ $color-black: #0f0f0f;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-// letter-spacing:
-$letter-spacing: 160%;
-
 //font size:
-$font-size-largest: 3.5rem;
+$font-size-largest: 4rem;
 $font-size-extra-large: 2rem;
 $font-size-large: 1.75rem;
 $font-size-medium: 1.5rem;
@@ -62,6 +54,11 @@ $font-size-extra-small: 0.8rem;
 $font-size-smallest: 0.65rem;
 
 // font-family
-$font-primary: "Lexend Deca", sans-serif;
-$font-secondary: "Inter", sans-serif;
-$font-headings: 'Baloo Tamma 2', cursive;
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Fuzzy Bubbles', cursive;
+
+// margin
+$margin-standard: 1rem;
+
+// width
+$width-standard: 20rem;

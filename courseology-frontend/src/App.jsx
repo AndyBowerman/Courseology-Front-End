@@ -1,18 +1,9 @@
 import './App.scss';
-import CardContainer from "./containers/CardContainer/CardContainer.jsx"
-import img from "./assets/maxresdefault.jpg";
+import Home from "./containers/Home/Home.jsx";
 
 const App = () => {
-
-  const obj = [
-    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
-    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
-    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"},
-    {img: img, title: "Course 1", info: "fhbved fkjvhbdifvb uhfvid udvivf", duration: "6 months", price: "£1000"}
-  ]
-
   return (
-    <CardContainer obj={obj} />
+    <Home />
   )
 }
 
