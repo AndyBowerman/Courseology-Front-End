@@ -1,15 +1,25 @@
 import "./Home.scss";
-import backgroundImage from "../../assets/learning-background.jpg";
-import Logo from "../../components/Logo/Logo";
+import Header from "../../components/Header/Header";
+import NavBar from "../../components/NavBar/NavBar";
+import LogoLarge from "../../components/LogoLarge/LogoLarge";
+import logoImage from "../../assets/logo.svg";
 
 const Home = () => {
   return (
     <div className="home">
-        <Logo />
-        <div className="home__cover--left"></div>
-        <div className="home__cover--right"></div>
-        
-
+        <div className="home__header">
+            <Header heading="coursology"/>
+        </div>
+        <div className="home__grid">
+            <div className="home__cover--left">
+                <div className="home__navbar">
+                    <NavBar />
+                </div>
+            </div>
+            <div className="home__cover--right">
+                <LogoLarge />          
+            </div>
+        </div>
     </div>
   )
 }

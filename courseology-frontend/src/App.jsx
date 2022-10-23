@@ -1,5 +1,5 @@
 import './App.scss';
-import Home from "./containers/Home/Home.jsx";
+import Home from "./containers/Home/Home";
 
 const App = () => {
   return (

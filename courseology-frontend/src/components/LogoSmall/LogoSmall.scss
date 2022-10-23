@@ -1,0 +1,29 @@
+@use "../../styles/variables.scss" as *;
+
+.logo-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    position: relative;
+
+    &__cover {
+        height: 5rem;
+        width: 15rem;
+        background-color: $color-green;
+        position: absolute;
+        transform: skew(8deg, 8deg);
+    }
+
+    &__img {
+        height: 4rem;
+        width: auto;
+        margin: 2rem;
+        z-index: 1;
+    }
+
+    &__header {
+        font-family: $font-primary;
+        z-index: 1;
+    }
+}

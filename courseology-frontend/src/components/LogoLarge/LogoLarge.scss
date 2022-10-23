@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+
+.logo-large {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo-large__cover {
+        background-color: $color-green;
+        opacity: 1;
+        height: 13rem;
+        width: 13rem;
+        position: absolute;
+        transform: skew(-10deg, -10deg);
+    }
+
+    .logo-large__logo {
+        height: 15rem;
+        width: auto;
+        z-index: 1;
+    }
+}
