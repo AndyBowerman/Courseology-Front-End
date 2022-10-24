@@ -1,6 +1,6 @@
 @use "../../styles/variables.scss" as *;
 
-.navbar {
+.nav-links {
     list-style: none;
 
     &__item {
@@ -15,7 +15,7 @@
         color: $color-blue-navy-dark;
     }
 
-    .navbar__item:hover {
+    .nav-links__item:hover {
         text-decoration: underline;
     }
 }

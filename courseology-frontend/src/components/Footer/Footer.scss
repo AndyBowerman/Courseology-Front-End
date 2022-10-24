@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.footer {
+    font-family: $font-primary;
+    font-size: $font-size-small;
+    color: $color-blue-navy-dark;
+}

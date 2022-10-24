@@ -1,9 +1,10 @@
 import './App.scss';
-import Home from "./containers/Home/Home";
+import Courses from './pages/Courses/Courses';
+
 
 const App = () => {
   return (
-    <Home />
+    <Courses />
   )
 }
 

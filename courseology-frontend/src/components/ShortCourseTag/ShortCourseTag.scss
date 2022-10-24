@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.short-course-tag {
+    padding: 1px;
+    background-color: $color-green;
+    width: 8rem;
+    border-radius: 5px;
+
+    &__text {
+        color: $color-blue-navy-dark;
+        font-family: $font-primary;
+        text-align: center;
+    }
+}

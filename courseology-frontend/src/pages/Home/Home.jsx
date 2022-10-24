@@ -1,8 +1,8 @@
 import "./Home.scss";
 import Header from "../../components/Header/Header";
-import NavBar from "../../components/NavBar/NavBar";
+import NavLinks from "../../components/NavLinks/NavLinks";
 import LogoLarge from "../../components/LogoLarge/LogoLarge";
-import logoImage from "../../assets/logo.svg";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -13,12 +13,15 @@ const Home = () => {
         <div className="home__grid">
             <div className="home__cover--left">
                 <div className="home__navbar">
-                    <NavBar />
+                    <NavLinks />
                 </div>
             </div>
             <div className="home__cover--right">
                 <LogoLarge />          
             </div>
+        </div>
+        <div className="home__footer">
+            <Footer />
         </div>
     </div>
   )

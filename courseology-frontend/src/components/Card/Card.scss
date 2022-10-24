@@ -1,24 +1,50 @@
 @use "../../styles//variables.scss" as *;
 
 .card {
-    width: 18.75rem;
-    font-family: $font-secondary;
+    width: 100%;
+    display: flex;
     background-color: $color-grey-light;
-    color: $color-blue-navy-dark;
-    margin: 10px;
+    margin: 1rem 0;
 
     &__img {
-        width: 100%;
+        width: 12rem;
         height: auto;
     }
 
-    &__title {
-        padding: 0.5rem 0;
-        margin: 0 0.25rem;
+    &__text-container {
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 35rem;
+
+        .card__title {
+            font-size: $font-size-medium;
+            font-family: $font-primary;
+            color: $color-blue-navy-dark;
+        }
+
+        .card__info {
+            font-size: $font-size-small;
+            font-family: $font-primary;
+            color: $color-blue-navy-dark;
+        }
     }
 
-    &__info {
+    &__tag-container {
+        text-align: center;
         padding: 0.5rem 0;
-        margin: 0 0.25rem;
+        
+        .card__duration {
+            font-family: $font-primary;
+            color: $color-blue-navy-dark;
+            font-weight: $font-weight-bold;
+        }
+
+        .card__price {
+            font-family: $font-primary;
+            color: $color-blue-navy-dark;
+            font-weight: $font-weight-bold;
+        }
     }
 }

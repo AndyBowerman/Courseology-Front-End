@@ -3,34 +3,49 @@ import "./CardContainer.scss";
 import { useState, useEffect } from "react";
 
 const CardContainer = () => {
-  const [courseData, setCourseData] = useState([])
+  const [courseData, setCourseData] = useState([]);
 
-  const getCourses = async course => {
+  const getCourses = async (course) => {
     const response = await fetch("http://localhost:8080/courses");
     const coursesData = await response.json();
     setCourseData(coursesData);
-  }
+  };
 
   useEffect(() => {
-    getCourses()
+    getCourses();
   }, []);
 
-    const renderCards = courseData?.map((course) => {
-        return (
-            <Card 
-                key={course.id}
-                img={course.img}
-                title={course.courseName}
-                info={course.courseDescription}
-                duration={course.duration}
-                price={course.price}
-            />
-        )
-        
-    })
-  return (
-    <div className="card-container">{renderCards}</div>
-  )
-}
+  const cleanPrice = (price) => {
+    let arr = price.toString().split("");
+    if (arr.length > 3) {
+      arr.splice(arr.length - 3, 0, ",");
+    }
+    arr.unshift("£");
+    return arr.join("");
+  };
 
-export default CardContainer
+  const cleanDuration = (duration) => {
+    if (duration >= 52) {
+      return `${duration / 52} years`
+    } else {
+      return `${duration} weeks`
+    }
+  }
+
+  const renderCards = courseData?.map((course) => {
+    return (
+      <Card
+        key={course.id}
+        img={course.img}
+        title={course.courseName}
+        info={course.courseDescription}
+        duration={cleanDuration(course.duration)}
+        price={cleanPrice(course.price)}
+        shortCourse={course.shortCourse}
+      />
+    );
+  });
+  return <div className="card-container">{renderCards}</div>;
+};
+
+export default CardContainer;

@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.button__dark {
+    color: $color-white;
+    background-color: $color-blue-navy-dark;
+    border: none;
+    padding: 1rem;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: $font-size-small;
+    font-family: $font-primary;
+}
