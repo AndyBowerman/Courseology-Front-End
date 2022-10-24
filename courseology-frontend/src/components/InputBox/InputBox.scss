@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+
+.input-box {
+    margin: 1.8rem;
+    display: flex;
+
+    &__container {
+        width: 25%;
+        font-family: $font-primary;
+        font-size: 1.3rem;
+    }
+
+    &__input {
+        width: 70%;
+        font-family: $font-primary;
+        font-size: $font-size-small;
+        border: none;
+        background-color: $color-white-smoke;
+        border: 1px solid $color-blue-navy-dark;
+        color: $color-black;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+    }
+}
+
+#courseDescription {
+    height: 6rem;
+}

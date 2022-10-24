@@ -2,7 +2,7 @@ import Card from "../../components/Card/Card";
 import "./CardContainer.scss";
 import { useState, useEffect } from "react";
 
-const CardContainer = () => {
+const CardContainer = ({searchTerm, filterValue}) => {
   const [courseData, setCourseData] = useState([]);
 
   const getCourses = async (course) => {
@@ -32,7 +32,10 @@ const CardContainer = () => {
     }
   }
 
-  const renderCards = courseData?.map((course) => {
+  const renderCards = courseData
+  .filter(course => course.courseName.toLowerCase().includes(searchTerm))
+  .filter(course => course.shortCourse !== filterValue)
+  .map((course) => {
     return (
       <Card
         key={course.id}

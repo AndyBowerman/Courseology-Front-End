@@ -1,6 +1,7 @@
 import './App.scss';
-import Courses from './pages/Courses/Courses';
-
+// import CreateCourse from './pages/CreateCourse/CreateCourse';
+import Courses from "./pages/Courses/Courses";
+// import Home from "./pages/Home/Home";
 
 const App = () => {
   return (
@@ -9,21 +10,3 @@ const App = () => {
 }
 
 export default App;
-
-
-
-
-
-
-/*
-
-Welcome page
-View courses page
-Individual course page
-Create new course page
-
-Create student page
-View all students page
-
-
-*/

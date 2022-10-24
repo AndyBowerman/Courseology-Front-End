@@ -1,28 +1,31 @@
 import "./Courses.scss";
-import NavBar from "../../containers/NavBar/NavBar";
-import Header from "../../components/Header/Header";
 import CardContainer from "../../containers/CardContainer/CardContainer";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Layout from "../../components/Layout/Layout";
+import { useState } from "react";
 
 const Courses = () => {
-  return (
-    <div className="courses">
-        <div className="courses__navbar">
-            <NavBar />
-        </div>
-        <div className="courses__container">
-            <div className="courses__header">
-                <Header heading="View Our Courses"/>
-            </div>
-            <div className="courses__search-bar">
-                <SearchBar />
-            </div>
-            <div className="courses__card-container">
-                <CardContainer />
-            </div>
-        </div>
-    </div>
-  )
-}
+    const [searchTerm, setSearchTerm] = useState("");
+    const [filterValue, setFilterValue] = useState(null);
 
-export default Courses
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value.toLowerCase());
+    }
+
+    const filterShortCourses = (event) => {
+        event.target.checked ? setFilterValue("") : setFilterValue(event.target.value);
+    }
+
+  return (
+    <Layout heading="View Our Courses">
+      <div className="courses__search-bar">
+        <SearchBar handleSearch={handleSearch} filterShortCourses={filterShortCourses} />
+      </div>
+      <div className="courses__card-container">
+        <CardContainer searchTerm={searchTerm} filterValue={filterValue}/>
+      </div>
+    </Layout>
+  );
+};
+
+export default Courses;
