@@ -11,13 +11,8 @@ import java.util.stream.Collectors;
 public class CourseService {
     @Autowired
     CourseRepository courseRepository;
-    TeacherRepository teacherRepository;
     public void addCourse(Course course) {
         courseRepository.save(course);
-    }
-
-    public void addTeacher(Teacher teacher) {
-        teacherRepository.save(teacher);
     }
 
     public List<Course> getCourseByCourseName(String courseName) {
@@ -44,7 +39,7 @@ public class CourseService {
         return courseRepository
                 .findAll()
                 .stream()
-                .filter(course -> course.isShortCourse())
+                .filter(Course::isShortCourse)
                 .collect(Collectors.toList());
     }
 

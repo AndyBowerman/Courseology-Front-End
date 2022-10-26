@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3001")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CourseController {
 
     @Autowired
@@ -22,12 +22,6 @@ public class CourseController {
         courseService.addCourse(course);
         return ResponseEntity.status(HttpStatus.CREATED).body(course);
     }
-
-//    @PostMapping("/teacher")
-//    public ResponseEntity<Course> createTeacher(@RequestBody Teacher teacher) {
-//        courseService.addTeacher(teacher);
-//        return ResponseEntity.status(HttpStatus.CREATED).body(teacher);
-//    }
 
     // READ
 

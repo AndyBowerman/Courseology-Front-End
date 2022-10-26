@@ -15,6 +15,10 @@
         color: $color-blue-navy-dark;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     .nav-links__item:hover {
         text-decoration: underline;
     }

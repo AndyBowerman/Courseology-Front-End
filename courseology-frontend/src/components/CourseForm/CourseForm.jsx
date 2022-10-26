@@ -1,5 +1,5 @@
 import InputBox from '../InputBox/InputBox';
-import Button from '../Button/Button'
+import Button from '../Button/Button';
 import './CourseForm.scss';
 
 const CourseForm = ({createCourse}) => {

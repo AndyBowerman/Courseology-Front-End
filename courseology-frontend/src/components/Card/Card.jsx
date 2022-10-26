@@ -1,8 +1,9 @@
 import "./Card.scss";
 import Button from "../Button/Button";
 import ShortCourseTag from "../ShortCourseTag/ShortCourseTag";
+import { Link } from "react-router-dom";
 
-const Card = ({ img, title, info, duration, price, shortCourse }) => {
+const Card = ({ id, img, title, info, duration, price, shortCourse }) => {
   return (
     <div className="card">
       <img className="card__img" src={img} alt="" />
@@ -14,7 +15,9 @@ const Card = ({ img, title, info, duration, price, shortCourse }) => {
       <div className="card__tag-container">
         <p className="card__duration">{duration}</p>
         <p className="card__price">{price}</p>
-        <Button text="More Information" />
+        <Link to={`/course/${id}`}>
+          <Button text="More Information" />
+        </Link>
       </div>
     </div>
   );

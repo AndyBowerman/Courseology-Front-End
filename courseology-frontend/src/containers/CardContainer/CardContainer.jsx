@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const CardContainer = ({searchTerm, filterValue}) => {
   const [courseData, setCourseData] = useState([]);
 
-  const getCourses = async (course) => {
+  const getCourses = async course => {
     const response = await fetch("http://localhost:8080/courses");
     const coursesData = await response.json();
     setCourseData(coursesData);
@@ -39,6 +39,7 @@ const CardContainer = ({searchTerm, filterValue}) => {
     return (
       <Card
         key={course.id}
+        id={course.id}
         img={course.img}
         title={course.courseName}
         info={course.courseDescription}

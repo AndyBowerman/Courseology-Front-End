@@ -1,9 +1,6 @@
 package com.example.courseology;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Teacher {
@@ -15,6 +12,17 @@ public class Teacher {
     private String secondarySubject;
     private String background;
     private String profilePicture;
+//    @ManyToOne
+//    @JoinColumn(name = "course_id")
+//    private Course course;
+//
+//    public Course getCourse() {
+//        return course;
+//    }
+//
+//    public void setCourse(Course course) {
+//        this.course = course;
+//    }
 
     public Teacher() {
 

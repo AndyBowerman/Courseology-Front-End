@@ -1,9 +1,9 @@
 package com.example.courseology;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.mapping.ToOne;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Course {
@@ -16,6 +16,18 @@ public class Course {
     private int duration; // in weeks
     private int price;
     private boolean shortCourse;
+//    @OneToMany
+//    @JoinColumn(name = "course_lead_id")
+//    private Teacher courseLead;
+//    private List<Teacher> supportStaff;
+//
+//    public Teacher getCourseLead() {
+//        return courseLead;
+//    }
+//
+//    public void setCourseLead(Teacher courseLead) {
+//        this.courseLead = courseLead;
+//    }
 
     public Course() {
 
