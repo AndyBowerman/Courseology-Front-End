@@ -1,1 +1,17 @@
 @use "../../styles/variables" as *;
+
+.course-information {
+    background-color: $color-white-blue;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.course-information__buttons {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

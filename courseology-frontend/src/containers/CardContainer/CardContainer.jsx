@@ -33,8 +33,6 @@ const CardContainer = ({searchTerm, filterValue}) => {
   }
 
   const renderCards = courseData
-  .filter(course => course.courseName.toLowerCase().includes(searchTerm))
-  .filter(course => course.shortCourse !== filterValue)
   .map((course) => {
     return (
       <Card

@@ -65,4 +65,12 @@ public class CourseService {
         }
         courseRepository.deleteById(id);
     }
+
+    public List<Course> getCourseById(int id) {
+        return courseRepository
+                .findAll()
+                .stream()
+                .filter(course -> course.getId() == id)
+                .collect(Collectors.toList());
+    }
 }

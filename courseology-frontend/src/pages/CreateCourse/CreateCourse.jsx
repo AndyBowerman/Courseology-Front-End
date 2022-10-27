@@ -1,11 +1,13 @@
 import "./CreateCourse.scss";
 import Layout from "../../components/Layout/Layout";
 import CourseForm from "../../components/CourseForm/CourseForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CreateCourse = () => {
     
     const [newCourse, setNewCourse] = useState({});
+    const navigate = useNavigate();
     
     const createCourse = (e) => {
         e.preventDefault();
@@ -17,19 +19,27 @@ const CreateCourse = () => {
             price: e.target.coursePrice.value,
             shortCourse: e.target.courseDuration.value <= 13 
         })
-        submitCourse(newCourse);
     }
 
     const submitCourse = async course => {
-        await fetch("http://localhost:8080/course", {
+        const arr = Object.values(newCourse);
+        arr.pop();
+        if(arr.some(value => value)) {
+            await fetch("http://localhost:8080/course", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(newCourse)
-        })
+            })
+            navigate("/our-courses");
+        }
     }
+
+    useEffect(() => {
+        submitCourse();
+    }, [newCourse]);
 
   return (
     <Layout heading="Create A New Course">

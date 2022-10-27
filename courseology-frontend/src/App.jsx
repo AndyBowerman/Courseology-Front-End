@@ -5,6 +5,7 @@ import CreateCourse from './pages/CreateCourse/CreateCourse';
 import Courses from "./pages/Courses/Courses";
 import Home from "./pages/Home/Home";
 import CourseInformation from "./pages/CourseInformation/CourseInformation";
+import UpdateCourse from './pages/UpdateCourse/UpdateCourse';
 
 
 const App = () => {
@@ -29,7 +30,18 @@ const App = () => {
             <AddTeacher />
           }
         ></Route>
-        
+        <Route
+          path="/course/:courseId"
+          element={
+            <CourseInformation />
+          }
+        ></Route>
+        <Route
+          path="/update-course/:courseId"
+          element={
+            <UpdateCourse />
+          }
+        ></Route>
         <Route
           path="/"
           element={
@@ -38,7 +50,6 @@ const App = () => {
         ></Route>
       </Routes>
     </Router>
-    // <CourseInformation />
   )
 }
 
