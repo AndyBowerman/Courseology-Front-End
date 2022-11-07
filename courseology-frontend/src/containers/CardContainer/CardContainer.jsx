@@ -13,7 +13,7 @@ const CardContainer = ({searchTerm, filterValue}) => {
 
   useEffect(() => {
     getCourses();
-  }, []);
+  });
 
   const cleanPrice = (price) => {
     let arr = price.toString().split("");
@@ -32,7 +32,21 @@ const CardContainer = ({searchTerm, filterValue}) => {
     }
   }
 
-  const renderCards = courseData
+  const createCards = (arr) => {
+    if(searchTerm && filterValue) {
+      return arr
+        .filter(course => course.courseName.toLowerCase().includes(searchTerm.toLowerCase()))
+        .filter(item => item.shortCourse);
+    } else if(filterValue) {
+      return arr.filter(item => item.shortCourse)
+    } else if(searchTerm) {
+      return arr.filter(course => course.courseName.toLowerCase().includes(searchTerm.toLowerCase()))
+    } else {
+      return arr;
+    }
+  }
+
+  const renderCards = createCards(courseData)
   .map((course) => {
     return (
       <Card

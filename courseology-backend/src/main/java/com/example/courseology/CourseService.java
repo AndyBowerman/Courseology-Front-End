@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -66,11 +67,11 @@ public class CourseService {
         courseRepository.deleteById(id);
     }
 
-    public List<Course> getCourseById(int id) {
-        return courseRepository
-                .findAll()
-                .stream()
-                .filter(course -> course.getId() == id)
-                .collect(Collectors.toList());
+    public Course getCourseById(int id) {
+        Optional<Course> course = courseRepository.findById(id);
+        if(course.isEmpty()) {
+            throw new CourseNotFoundException("Course");
+        }
+        return course.get();
     }
 }

@@ -13,7 +13,11 @@ const Courses = () => {
     }
 
     const filterShortCourses = (event) => {
-        event.target.checked ? setFilterValue("") : setFilterValue(event.target.value);
+        if(event.target.checked) {
+          setFilterValue(true)
+        } else {
+          setFilterValue(false)
+        }
     }
 
   return (

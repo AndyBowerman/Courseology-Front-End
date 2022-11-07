@@ -13,12 +13,12 @@ const CourseInformation = () => {
     const getCourse = async () => {
         const response = await fetch(`http://localhost:8080/course/${courseId}`)
         const courseData = await response.json();
-        setCourse(courseData[0]);
+        setCourse(courseData);
     }
 
     useEffect(() => {
         getCourse();
-    })
+    }, [])
 
     const handleDelete = async () => {
         await fetch(`http://localhost:8080/course/${courseId}`, {method: 'DELETE'})

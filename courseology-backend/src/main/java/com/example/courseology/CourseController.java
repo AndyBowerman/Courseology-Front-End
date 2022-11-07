@@ -38,7 +38,7 @@ public class CourseController {
     // get course by ID
 
     @GetMapping("/course/{id}")
-    public ResponseEntity<List<Course>> getCoursesById(@PathVariable int id) {
+    public ResponseEntity<Course> getCoursesById(@PathVariable int id) {
         return ResponseEntity.status(HttpStatus.OK).body(courseService.getCourseById(id));
     }
 

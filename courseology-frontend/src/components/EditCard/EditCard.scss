@@ -1,0 +1,37 @@
+@use "../../styles/variables" as *;
+
+.edit-card {
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: $color-white-smoke;
+
+    &__img {
+        height: 10rem;
+        width: auto;
+    }
+
+    &__container {
+        padding: 1rem;
+
+        .edit-card__header {
+            font-family: $font-primary;
+            padding-bottom: 0.5rem;
+        }
+
+        .edit-card__info {
+            font-family: $font-primary;
+        }
+
+        .edit-card__list {
+            list-style: none;
+            display:flex;
+
+            .edit-card__list-item {
+                font-family: $font-primary;
+                font-weight: 700;
+                padding: 0.5rem 2rem 0 0;
+            }
+        }
+    }
+}
