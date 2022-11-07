@@ -12,7 +12,7 @@ const Layout = ({heading, children}) => {
             <header className="layout__header">
                 <Header heading={heading}/>
             </header>
-            <main>
+            <main className="layout__main">
                 {children}
             </main>            
         </div>

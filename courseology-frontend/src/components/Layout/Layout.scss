@@ -26,5 +26,10 @@
             border-bottom: 1px dashed $color-blue-navy-dark;
             padding-bottom: 1rem;
         }
+
+        .layout__main {
+            min-height: 100%;
+            min-width: 100%;
+        }
     }
 }
