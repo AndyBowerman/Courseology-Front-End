@@ -18,7 +18,7 @@ const Card = ({ id, img, title, info, duration, price, shortCourse }) => {
         <p className="card__duration">{duration}</p>
         <p className="card__price">{price}</p>
         <Link to={`/course/${id}`}>
-          <Button text="More Information" />
+          <Button name="card__button" text="More Information" />
         </Link>
       </div>
     </div>

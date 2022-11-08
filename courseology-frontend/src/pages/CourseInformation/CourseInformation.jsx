@@ -33,9 +33,9 @@ const CourseInformation = () => {
             </div>
             <div className="course-information__buttons">
                 <Link to={`/update-course/${courseId}`}>
-                    <Button text="Update"/>
+                    <Button name="button__update" text="Update"/>
                 </Link>                
-                <Button func={handleDelete} text="Delete"></Button>
+                <Button name="button__delete" func={handleDelete} text="Delete"></Button>
                 <Link to="/our-courses">
                     <Button text="Return to Courses" />
                 </Link>

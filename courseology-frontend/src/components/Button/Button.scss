@@ -11,3 +11,16 @@
     font-family: $font-primary;
     cursor: pointer;
 }
+
+.card__button {
+    font-size: $font-size-extra-small;
+    padding: 0.8rem;
+}
+
+.button__update {
+    background-color: #2c9c2c;
+}
+
+.button__delete {
+    background-color: #c12e27;
+}

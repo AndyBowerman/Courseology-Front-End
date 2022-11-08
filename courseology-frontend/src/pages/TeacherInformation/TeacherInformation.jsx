@@ -34,10 +34,12 @@ const TeacherInformation = () => {
         img={teacher.profilePicture}
       />
       <div className="teacher-information">
-        <Button text="Update" />
-        <Button func={handleDelete} text="Delete" />
+        <Link to={`/update-teacher/${teacherId}`}>
+          <Button name="button__update" text="Update" />
+        </Link>
+        <Button name="button__delete" func={handleDelete} text="Delete" />
         <Link to="/our-teachers">
-            <Button text="Return to Our Teachers" />
+          <Button text="Return to Our Teachers" />
         </Link>        
       </div>
     </Layout>

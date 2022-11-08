@@ -8,6 +8,7 @@ import CourseInformation from "./pages/CourseInformation/CourseInformation";
 import UpdateCourse from './pages/UpdateCourse/UpdateCourse';
 import OurTeachers from './pages/OurTeachers/OurTeachers';
 import TeacherInformation from "./pages/TeacherInformation/TeacherInformation";
+import UpdateTeacher from './pages/UpdateTeacher/UpdateTeacher';
 
 
 const App = () => {
@@ -54,6 +55,12 @@ const App = () => {
           path="/teacher/:teacherId"
           element={
             <TeacherInformation />
+          }
+        ></Route>
+        <Route
+          path="/update-teacher/:teacherId"
+          element={
+            <UpdateTeacher />
           }
         ></Route>
         <Route

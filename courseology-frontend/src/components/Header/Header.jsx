@@ -1,9 +1,9 @@
 import "./Header.scss";
 
-const Header = ({heading}) => {
+const Header = ({heading, name}) => {
   return (
     <div className="header">
-        <h2 className="header__text">{heading}</h2>
+        <h2 className={name}>{heading}</h2>
     </div>
   )
 }

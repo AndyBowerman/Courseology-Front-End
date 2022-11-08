@@ -10,7 +10,7 @@ const Layout = ({heading, children}) => {
         </aside>
         <div className="layout__container">
             <header className="layout__header">
-                <Header heading={heading}/>
+                <Header name="header__text header__text--large" heading={heading}/>
             </header>
             <main className="layout__main">
                 {children}

@@ -1,19 +1,19 @@
 @use "../../styles//variables.scss" as *;
 
 .card {
-    width: 90%;
     display: flex;
     background-color: $color-grey-light;
     justify-content: space-between;
-    margin: 0.5rem 1rem;
+    margin: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
     &__container--left {
         display: flex;
 
-
         .card__img {
+            height: 10rem;
             width: 12rem;
-            height: auto;
         }
     
         .card__text-container {
@@ -23,7 +23,7 @@
             justify-content: center;
     
             .card__title {
-                font-size: $font-size-medium;
+                font-size: 1.25rem;
                 font-family: $font-primary;
                 color: $color-blue-navy-dark;
             }
@@ -32,14 +32,20 @@
                 font-size: $font-size-small;
                 font-family: $font-primary;
                 color: $color-blue-navy-dark;
+                margin: 0.5rem 0;
             }
         }
     }
 
     &__container--right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         padding: 0.5rem 0;
-        width: 10rem;
+        width: 7.5rem;
+        
         
         .card__duration {
             font-family: $font-primary;

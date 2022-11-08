@@ -3,34 +3,27 @@
 .course-details {
     display: flex;
     padding: 2rem;
-    margin-top: 4rem;
 
     &__img {
-        height: 21rem;
+        height: 17rem;
         width: auto;
     }
 
     &__container {
-        padding: 1rem;
+        padding-left: 2rem;
 
         .course-details__description {
             font-family: $font-primary;
             color: $color-black;
-            font-size: $font-size-medium;
+            font-size: $font-size-small;
             margin: 1rem 0;
-        }
-
-        .course-details__description {
-            font-family: $font-primary;
-            color: $color-black;
-            font-size: $font-size-medium;
         }
 
         .course-details__points {
             font-family: $font-primary;
             color: $color-blue-navy-dark;
             font-weight: $font-weight-bold;
-            font-size: 1.3rem;
+            font-size: $font-size-small;
         }
     }
 }

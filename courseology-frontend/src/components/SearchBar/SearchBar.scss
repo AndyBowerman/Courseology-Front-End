@@ -16,7 +16,7 @@
         color: $color-blue-navy-dark;
         background-color: $color-grey-light;
         border: none;
-        font-size: $font-size-medium;
+        font-size: $font-size-small;
         padding: 0.5rem;
     }
 
@@ -30,5 +30,6 @@
         font-family: $font-primary;
         color: $color-blue-navy-dark;
         padding-right: 0.5rem;
+        font-size: $font-size-small;
     }
 }

@@ -1,8 +1,8 @@
 import "./Button.scss";
 
-const Button = ({text, func}) => {
+const Button = ({text, func, name}) => {
   return (
-    <button className="button__dark" onClick={func}>{text}</button>
+    <button className={`button__dark ${name}`} onClick={func}>{text}</button>
   )
 }
 
