@@ -8,11 +8,10 @@
     justify-content: center;
 
     &__header {
-        margin-top: 3rem;
+        top: 3rem;
         position: absolute;
         border: dashed 0.1rem $color-blue-navy-dark;
         padding: 0.5rem;
-        
     }
 
     &__grid {
@@ -75,6 +74,6 @@
 
     &__footer {
         position: absolute;
-        margin-top: 55rem;
+        bottom: 2rem;
     }
 }

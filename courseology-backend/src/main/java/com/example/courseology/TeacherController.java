@@ -35,6 +35,11 @@ public class TeacherController {
         return ResponseEntity.status(HttpStatus.OK).body(teacherService.getAllCourses());
     }
 
+    @GetMapping("/teacher/{id}")
+    public ResponseEntity<Teacher> getTeacherById(@PathVariable int id) {
+        return ResponseEntity.status(HttpStatus.OK).body(teacherService.getTeacherById(id));
+    }
+
     // Update
 
     @PutMapping("/teacher/{id}")

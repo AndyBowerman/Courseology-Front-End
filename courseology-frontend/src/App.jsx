@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import CourseInformation from "./pages/CourseInformation/CourseInformation";
 import UpdateCourse from './pages/UpdateCourse/UpdateCourse';
 import OurTeachers from './pages/OurTeachers/OurTeachers';
+import TeacherInformation from "./pages/TeacherInformation/TeacherInformation";
 
 
 const App = () => {
@@ -47,6 +48,12 @@ const App = () => {
           path="/our-teachers"
           element={
             <OurTeachers />
+          }
+        ></Route>
+        <Route
+          path="/teacher/:teacherId"
+          element={
+            <TeacherInformation />
           }
         ></Route>
         <Route

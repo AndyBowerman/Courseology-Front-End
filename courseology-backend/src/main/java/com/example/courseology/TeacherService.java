@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TeacherService {
@@ -31,5 +32,13 @@ public class TeacherService {
             throw new TeacherNotFoundException();
         }
         teacherRepository.deleteById(id);
+    }
+
+    public Teacher getTeacherById(int id) {
+        Optional<Teacher> teacher = teacherRepository.findById(id);
+        if(teacher.isEmpty()) {
+            throw new TeacherNotFoundException();
+        }
+        return teacher.get();
     }
 }

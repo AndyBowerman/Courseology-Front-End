@@ -13,6 +13,7 @@
         background-color: $color-green;
         position: absolute;
         transform: skew(8deg, 8deg);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     &__img {

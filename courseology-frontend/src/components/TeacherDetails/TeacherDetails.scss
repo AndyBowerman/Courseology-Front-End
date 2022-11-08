@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.teacher-details {
+    display: flex;
+    padding: 2rem;
+
+    &__img {
+        height: 19rem;
+        width: auto;
+    }
+
+    &__container {
+        padding: 1rem;
+        font-family: $font-primary;
+
+        .teacher-details__background {
+            font-family: $font-primary;
+            margin-bottom: 1rem;
+        }
+
+        .teacher-details__subject {
+            font-family: $font-primary;
+            font-size: 1.3rem;
+            margin: 2rem 0;
+        }
+
+        .teacher-details__link {
+            font-family: $font-primary;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+}
