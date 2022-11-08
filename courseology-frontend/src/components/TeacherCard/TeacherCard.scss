@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.teacher-card {
+    display: flex;
+
+    &__img {
+        height: 15rem;
+        width: auto;
+    }
+
+    &__container {
+        margin-left: 1.5rem;
+
+        .teacher-card__name {
+            font-family: $font-primary;
+            font-size: $font-size-large;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-card__subject {
+            font-family: $font-primary;
+            font-size: $font-size-medium;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-card__background {
+            font-family: $font-primary;
+            font-size: $font-size-small;
+            margin-bottom: 1rem;
+        }
+    }
+}

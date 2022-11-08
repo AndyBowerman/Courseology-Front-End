@@ -12,17 +12,6 @@ public class Teacher {
     private String secondarySubject;
     private String background;
     private String profilePicture;
-//    @ManyToOne
-//    @JoinColumn(name = "course_id")
-//    private Course course;
-//
-//    public Course getCourse() {
-//        return course;
-//    }
-//
-//    public void setCourse(Course course) {
-//        this.course = course;
-//    }
 
     public Teacher() {
 
