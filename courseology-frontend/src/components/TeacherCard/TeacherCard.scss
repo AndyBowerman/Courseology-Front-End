@@ -2,10 +2,12 @@
 
 .teacher-card {
     display: flex;
+    padding: 2rem 0;
+    border-bottom: 1px dashed $color-black;
 
     &__img {
         height: 15rem;
-        width: auto;
+        width: 20rem;
     }
 
     &__container {

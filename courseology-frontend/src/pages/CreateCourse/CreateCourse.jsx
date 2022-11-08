@@ -21,7 +21,7 @@ const CreateCourse = () => {
         })
     }
 
-    const submitCourse = async course => {
+    const submitCourse = async () => {
         const arr = Object.values(newCourse);
         arr.pop();
         if(arr.some(value => value)) {
