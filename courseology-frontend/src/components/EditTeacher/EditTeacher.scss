@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.edit-teacher {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+        width: 80%;
+        margin: 1rem 0;
+        font-family: $font-primary;
+        font-size: $font-size-small;
+        border: none;
+        background-color: $color-white-smoke;
+        border: 1px solid $color-blue-navy-dark;
+        color: $color-black;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+    }
+
+    &__submit {
+        color: $color-white;
+        background-color: #2c9c2c;
+        border: none;
+        padding: 1rem;
+        margin: 10px;
+        border-radius: 5px;
+        font-size: $font-size-small;
+        font-family: $font-primary;
+        cursor: pointer;
+    }
+}
