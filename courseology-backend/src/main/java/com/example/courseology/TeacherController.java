@@ -32,7 +32,12 @@ public class TeacherController {
 
     @GetMapping("/teachers")
     public ResponseEntity<List<Teacher>> getTeachers() {
-        return ResponseEntity.status(HttpStatus.OK).body(teacherService.getAllCourses());
+        return ResponseEntity.status(HttpStatus.OK).body(teacherService.getAllTeachers());
+    }
+
+    @GetMapping("/find/teachers")
+    public ResponseEntity<List<Teacher>> getTeacherByMainSubject(@RequestParam(required = true) String mainSubject) {
+        return ResponseEntity.status(HttpStatus.OK).body(teacherService.getTeacherByMainSubject(mainSubject));
     }
 
     @GetMapping("/teacher/{id}")

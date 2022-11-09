@@ -1,17 +1,22 @@
 @use "../../styles/variables" as *;
 
 .course-information {
-    background-color: $color-white-blue;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-top: 1px dashed $color-black;
     margin: 2rem;
-}
 
-.course-information__buttons {
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__title {
+        padding: 2rem;
+        text-align: center;
+        font-size: 3rem;
+        font-family: $font-primary;
+        color: $color-black;
+        font-weight: 400;
+    }
+
+    &__buttons {
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

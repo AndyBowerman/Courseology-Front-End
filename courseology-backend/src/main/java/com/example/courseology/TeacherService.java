@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TeacherService {
@@ -15,7 +16,7 @@ public class TeacherService {
         teacherRepository.save(teacher);
     }
 
-    public List<Teacher> getAllCourses() {
+    public List<Teacher> getAllTeachers() {
         return teacherRepository.findAll();
     }
 
@@ -40,5 +41,9 @@ public class TeacherService {
             throw new TeacherNotFoundException();
         }
         return teacher.get();
+    }
+
+    public List<Teacher> getTeacherByMainSubject(String mainSubject) {
+        return teacherRepository.getAllByMainSubject(mainSubject);
     }
 }
