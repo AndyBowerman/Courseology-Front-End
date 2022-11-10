@@ -1,12 +1,23 @@
 @use "../../styles/variables" as *;
 
 .navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: $color-white-smoke;
+}
+
+@media screen and (min-width: 940px) {
+  .navbar {
     height: 100vh;
     width: 19rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
     background-color: $color-white-smoke;
+  }
 }

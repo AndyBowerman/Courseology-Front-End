@@ -7,6 +7,8 @@ import Button from "../../components/Button/Button";
 
 const TeacherInformation = () => {
   const [teacher, setTeacher] = useState({});
+  const [course, setCourse] = useState(0);
+  const [secondarySubject, setSecondarySubject] = useState(0);
   const { teacherId } = useParams();
   const navigate = useNavigate();
 
@@ -16,9 +18,26 @@ const TeacherInformation = () => {
     setTeacher(teacherData);
   };
 
+  const getMainSubject = async () => {
+    const response = await fetch(`http://localhost:8080/courses?courseName=${teacher.mainSubject}`);
+    const courseData = await response.json();
+    setCourse(courseData[0].id);
+  }
+
+  const getSecondarySubject = async () => {
+    const response = await fetch(`http://localhost:8080/courses?courseName=${teacher.secondarySubject}`);
+    const courseData = await response.json();
+    setSecondarySubject(courseData[0].id);
+  }
+
   useEffect(() => {
     getTeacher();
   }, []);
+
+  useEffect(() => {
+    getMainSubject();
+    getSecondarySubject();
+  }, [teacher]);
 
   const handleDelete = async () => {
     await fetch(`http://localhost:8080/teacher/${teacherId}`, {method: 'DELETE'})
@@ -32,6 +51,8 @@ const TeacherInformation = () => {
         secondarySubject={teacher.secondarySubject}
         background={teacher.background}
         img={teacher.profilePicture}
+        id={course}
+        secondId={secondarySubject}
       />
       <div className="teacher-information">
         <Link to={`/update-teacher/${teacherId}`}>

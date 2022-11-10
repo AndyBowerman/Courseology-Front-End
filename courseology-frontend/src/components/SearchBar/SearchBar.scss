@@ -33,3 +33,9 @@
         font-size: $font-size-small;
     }
 }
+
+@media (max-width: 650px) {
+    .search-bar__input {
+        width: 95%;
+    }
+}

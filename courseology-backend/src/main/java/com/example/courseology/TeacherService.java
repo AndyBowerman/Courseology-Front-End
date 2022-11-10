@@ -46,4 +46,8 @@ public class TeacherService {
     public List<Teacher> getTeacherByMainSubject(String mainSubject) {
         return teacherRepository.getAllByMainSubject(mainSubject);
     }
+
+    public List<Teacher> getTeacherBySecondarySubject(String secondarySubject) {
+        return teacherRepository.getAllBySecondarySubject(secondarySubject);
+    }
 }

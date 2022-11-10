@@ -21,7 +21,7 @@ const UpdateTeacher = () => {
   return (
     <Layout heading="Update Teacher">
       <EditTeacher id={teacherId} handleSubmit={handleSubmit} />
-      <div className="update-course__container">
+      <div className="update-teacher__container">
         <Link to={`/teacher/${teacherId}`}>
           <Button text="Return to Teacher" />
         </Link>

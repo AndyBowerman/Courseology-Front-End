@@ -33,3 +33,13 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 650px) {
+    .edit-teacher{
+        padding: 0.5rem;
+
+        &__input {
+            width: 100%;
+        }
+    }
+}

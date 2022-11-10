@@ -26,3 +26,22 @@
 #courseDescription, #background {
     height: 6rem;
 }
+
+@media (max-width: 750px) {
+    .input-box {
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem;
+
+        &__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__input {
+            width: 90%;
+            margin: 0.5rem;
+        }
+    }
+}
