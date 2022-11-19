@@ -6,7 +6,7 @@ const TextArea = ({inputName, inputType, labelText, onChange}) => {
         <div className="input-box__container">
             <label className="input-box__label" htmlFor={inputName}>{labelText}</label>
         </div>        
-        <textarea className="input-box__input" type={inputType} id={inputName} name={inputName} onChange={onChange} required />
+        <textarea maxLength="230" className="input-box__input" type={inputType} id={inputName} name={inputName} onChange={onChange} required />
     </div>
   )
 }

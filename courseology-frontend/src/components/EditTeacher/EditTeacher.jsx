@@ -31,6 +31,7 @@ const EditTeacher = ({ id, handleSubmit }) => {
         onInput={(e) => setTeacher({ ...teacher, name: e.target.value })}
       />
       <textarea
+        maxLength="230"
         className="edit-teacher__input"
         value={teacher.background}
         onInput={(e) => setTeacher({ ...teacher, background: e.target.value })}

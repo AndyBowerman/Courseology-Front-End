@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const EditForm = ({ id, handleSubmit }) => {
-  const [course, setCourse] = useState({});  
+  const [course, setCourse] = useState({});
   const navigate = useNavigate();
 
   const getCourse = async (id) => {
@@ -31,7 +31,7 @@ const EditForm = ({ id, handleSubmit }) => {
   const updateCourse = (e) => {
     e.preventDefault();
     handleSubmit(course);
-    navigate(`/course/${id}`)
+    navigate(`/course/${id}`);
   };
 
   return (
@@ -45,6 +45,7 @@ const EditForm = ({ id, handleSubmit }) => {
         }
       />
       <textarea
+        maxLength="230"
         className="edit-form__input"
         value={course.courseDescription}
         onInput={(event) =>
