@@ -6,7 +6,7 @@ const CardContainer = ({searchTerm, filterValue}) => {
   const [courses, setCourses] = useState([]);
   const [unfilteredCourses, setUnfilteredCourses] = useState([]);
 
-  const getCourses = async course => {
+  const getCourses = async () => {
     const response = await fetch("http://localhost:8080/courses");
     const coursesData = await response.json();
     setCourses(coursesData);

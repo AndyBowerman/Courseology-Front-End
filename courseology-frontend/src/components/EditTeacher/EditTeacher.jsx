@@ -1,62 +1,35 @@
 import "./EditTeacher.scss";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
-const EditTeacher = ({ id, handleSubmit }) => {
-  const [teacher, setTeacher] = useState({});
-  const navigate = useNavigate();
-
-  const getTeacher = async (id) => {
-    const response = await fetch(`http://localhost:8080/teacher/${id}`);
-    const teacherData = await response.json();
-    setTeacher(teacherData);
-  };
-
-  useEffect(() => {
-    getTeacher(id);
-  }, [id]);
-
-  const updateTeacher = (e) => {
-    e.preventDefault();
-    handleSubmit(teacher);
-    navigate(`/teacher/${id}`);
-  };
-
+const EditTeacher = ({
+  teacher,
+  toggleDisplayConfirmation,
+  getUpdatedTeacher,
+}) => {
   return (
-    <form className="edit-teacher" onSubmit={updateTeacher}>
+    <form className="edit-teacher" onSubmit={toggleDisplayConfirmation}>
       <input
         type="text"
         className="edit-teacher__input"
         value={teacher.name}
-        onInput={(e) => setTeacher({ ...teacher, name: e.target.value })}
+        onChange={(e) => getUpdatedTeacher(1, e.target.value)}
       />
       <textarea
         maxLength="230"
         className="edit-teacher__input"
         value={teacher.background}
-        onInput={(e) => setTeacher({ ...teacher, background: e.target.value })}
+        onChange={(e) => getUpdatedTeacher(2, e.target.value)}
       />
       <input
         type="text"
         className="edit-teacher__input"
-        value={teacher.mainSubject}
-        onInput={(e) => setTeacher({ ...teacher, mainSubject: e.target.value })}
-      />
-      <input
-        type="text"
-        className="edit-teacher__input"
-        value={teacher.secondarySubject}
-        onInput={(e) =>
-          setTeacher({ ...teacher, secondarySubject: e.target.value })
-        }
+        value={teacher.subject}
+        onChange={(e) => getUpdatedTeacher(3, e.target.value)}
       />
       <input
         type="text"
         className="edit-teacher__input"
         value={teacher.profilePicture}
-        onInput={(e) =>
-          setTeacher({ ...teacher, profilePicture: e.target.value })
-        }
+        onChange={(e) => getUpdatedTeacher(4, e.target.value)}
       />
       <button type="submit" className="edit-teacher__submit">
         Update Teacher

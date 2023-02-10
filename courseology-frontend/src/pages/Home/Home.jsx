@@ -7,25 +7,21 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="home">
-      <div className="home__header home__header--large">
-        <Header name="header__text header__text--large" heading="coursology" />
-      </div>
-      <div className="home__grid">
-        <div className="home__cover--left">
-          <div className="home__header home__header--small">
-            <Header name="header__text header__text--small" heading="coursology" />
-          </div>
-          <div className="home__navbar">
+      <div className="home__dec"></div>
+      <header className="home__header">
+        <Header heading="Coursology" />
+      </header>
+      <main className="home__flex">
+        <section className="home__cover--left">
             <NavLinks />
-          </div>
-        </div>
-        <div className="home__cover--right">
+        </section>
+        <section className="home__cover--right">
           <LogoLarge />
-        </div>
-      </div>
-      <div className="home__footer">
+        </section>
+      </main>
+      <footer className="home__footer">
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };

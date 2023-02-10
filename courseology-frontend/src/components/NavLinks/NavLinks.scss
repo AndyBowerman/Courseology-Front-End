@@ -4,11 +4,10 @@
     list-style: none;
 
     &__item {
-        font-family: $font-primary;
-        font-size: $font-size-medium;
+        font-size: $font-size-small;
         font-weight: $font-weight-bold;
         letter-spacing: 0.3rem;
-        line-height: 4rem;
+        line-height: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -18,15 +17,11 @@
     &__link {
         text-decoration: none;
     }
-
-    .nav-links__item:hover {
-        text-decoration: underline;
-    }
 }
 
-@media (max-width: 940px) {
+@media(min-width: 550px) {
     .nav-links__item {
-        line-height: 2rem;
-        font-size: $font-size-small;
+        font-size: $font-size-medium;
+        line-height: 4rem;
     }
 }

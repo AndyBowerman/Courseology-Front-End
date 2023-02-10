@@ -7,61 +7,61 @@ import Button from "../../components/Button/Button";
 
 const TeacherInformation = () => {
   const [teacher, setTeacher] = useState({});
-  const [course, setCourse] = useState(0);
-  const [secondarySubject, setSecondarySubject] = useState(0);
+  const [course, setCourse] = useState({});
+  const [displayConfirmation, setDisplayConfirmation] = useState(false);
   const { teacherId } = useParams();
   const navigate = useNavigate();
 
   const getTeacher = async () => {
-    const response = await fetch(`http://localhost:8080/teacher/${teacherId}`);
+    const response = await fetch(
+      `http://localhost:8080/teacherById/${teacherId}`
+    );
     const teacherData = await response.json();
     setTeacher(teacherData);
   };
-
-  const getMainSubject = async () => {
-    const response = await fetch(`http://localhost:8080/courses?courseName=${teacher.mainSubject}`);
-    const courseData = await response.json();
-    setCourse(courseData[0].id);
-  }
-
-  const getSecondarySubject = async () => {
-    const response = await fetch(`http://localhost:8080/courses?courseName=${teacher.secondarySubject}`);
-    const courseData = await response.json();
-    setSecondarySubject(courseData[0].id);
-  }
 
   useEffect(() => {
     getTeacher();
   }, []);
 
+  const getCourse = async () => {
+    const response = await fetch(
+      `http://localhost:8080/courseByName/${teacher.subject}`
+    );
+    const courseData = await response.json();
+    setCourse(courseData);
+  };
+
   useEffect(() => {
-    getMainSubject();
-    getSecondarySubject();
+    getCourse();
   }, [teacher]);
 
+  const toggleDisplayConfirmation = () => setDisplayConfirmation(!displayConfirmation);
+
   const handleDelete = async () => {
-    await fetch(`http://localhost:8080/teacher/${teacherId}`, {method: 'DELETE'})
+    await fetch(`http://localhost:8080/teacher/${teacherId}`, {
+      method: "DELETE",
+    });
     navigate("/our-teachers");
-}
+  };
 
   return (
-    <Layout heading={teacher.name}>
+    <Layout heading={teacher.name} displayConfirmation={displayConfirmation} message="Are you sure you want to remove this teachers record?" confirmationFunction={handleDelete} cancelFunction={toggleDisplayConfirmation}>
       <TeacherDetails
-        mainSubject={teacher.mainSubject}
+        subject={teacher.subject}
         secondarySubject={teacher.secondarySubject}
         background={teacher.background}
         img={teacher.profilePicture}
-        id={course}
-        secondId={secondarySubject}
+        courseId={course.id}
       />
       <div className="teacher-information">
         <Link to={`/update-teacher/${teacherId}`}>
           <Button name="button__update" text="Update" />
         </Link>
-        <Button name="button__delete" func={handleDelete} text="Delete" />
+        <Button name="button__delete" func={toggleDisplayConfirmation} text="Delete" />
         <Link to="/our-teachers">
           <Button text="Return to Our Teachers" />
-        </Link>        
+        </Link>
       </div>
     </Layout>
   );

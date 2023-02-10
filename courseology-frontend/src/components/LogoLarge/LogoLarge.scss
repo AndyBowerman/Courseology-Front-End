@@ -9,44 +9,27 @@
     .logo-large__cover {
         background-color: $color-green;
         opacity: 1;
-        height: 13rem;
-        width: 13rem;
+        height: 10rem;
+        width: 10rem;
         position: absolute;
         transform: skew(-10deg, -10deg);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .logo-large__logo {
-        height: 15rem;
+        height: 10rem;
         width: auto;
         z-index: 1;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1000px) {
     .logo-large__logo {
-        height: 10rem !important;
+        height: 15rem !important;
     }
     
     .logo-large__cover {
-        height: 10rem !important;
-        width: 10rem !important;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .logo-large__logo {
-        height: 7rem !important;
-    }
-    
-    .logo-large__cover {
-        height: 7rem !important;
-        width: 7rem !important;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .logo-large {
-        display: none;
+        height: 13rem !important;
+        width: 13rem !important;
     }
 }

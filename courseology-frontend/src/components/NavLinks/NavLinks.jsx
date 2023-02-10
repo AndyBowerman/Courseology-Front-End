@@ -1,7 +1,7 @@
 import "./NavLinks.scss";
 import { Link } from "react-router-dom";
 
-const NavLinks = ({ name }) => {
+const NavLinks = () => {
   return (
     <ul className="nav-links">
       <Link to="/" className="nav-links__link">

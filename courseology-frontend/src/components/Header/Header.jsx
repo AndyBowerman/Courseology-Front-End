@@ -1,11 +1,7 @@
 import "./Header.scss";
 
-const Header = ({heading, name}) => {
-  return (
-    <div className="header">
-        <h2 className={name}>{heading}</h2>
-    </div>
-  )
-}
+const Header = ({ heading }) => {
+  return <h2 className="header">{heading}</h2>;
+};
 
-export default Header
+export default Header;
