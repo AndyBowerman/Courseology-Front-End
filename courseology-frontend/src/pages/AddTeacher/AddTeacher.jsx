@@ -1,11 +1,12 @@
 import "./AddTeacher.scss";
 import Layout from "../../components/Layout/Layout";
 import TeacherForm from "../../components/TeacherForm/TeacherForm";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AddTeacher = () => {
   const [newTeacher, setNewTeacher] = useState({});
+  const [displayConfirmation, setDisplayConfirmation] = useState(false);
   const navigate = useNavigate();
 
   const createTeacher = (e) => {
@@ -13,15 +14,15 @@ const AddTeacher = () => {
     setNewTeacher({
       name: e.target.name.value,
       background: e.target.background.value,
-      mainSubject: e.target.mainSubject.value,
-      secondarySubject: e.target.secondarySubject.value,
+      subject: e.target.subject.value,
       profilePicture: e.target.profilePicture.value,
     });
+    setDisplayConfirmation(!displayConfirmation);
   };
 
+  const cancelSubmit = () => setDisplayConfirmation(!displayConfirmation);
+
   const addTeacher = async () => {
-    const arr = Object.values(newTeacher);
-    if (arr.some((value) => value)) {
       await fetch("http://localhost:8080/teacher", {
         method: "POST",
         headers: {
@@ -31,15 +32,17 @@ const AddTeacher = () => {
         body: JSON.stringify(newTeacher),
       });
       navigate("/our-teachers");
-    }
+    
   };
 
-  useEffect(() => {
-    addTeacher();
-  }, [newTeacher]);
-
   return (
-    <Layout heading="Add A New Teacher">
+    <Layout
+      heading="Add A New Teacher"
+      displayConfirmation={displayConfirmation}
+      message="Add Teacher?"
+      confirmationFunction={addTeacher}
+      cancelFunction={cancelSubmit}
+    >
       <TeacherForm createTeacher={createTeacher} />
     </Layout>
   );

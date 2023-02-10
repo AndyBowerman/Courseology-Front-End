@@ -1,0 +1,47 @@
+@use "../../styles/variables" as *;
+
+.confirmation-pop-up {
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: $color-white;
+    padding: 2rem 3rem;
+    font-size: $font-size-extra-large;
+    letter-spacing: 0.2rem;
+    border-radius: 0.2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem $color-black solid;
+    max-width: 30rem;
+
+    .confirmation-pop-up__confirm {
+      font-size: $font-size-medium;
+      background-color: $color-black;
+      color: $color-white;
+      padding: 0 0.5rem;
+      border-radius: 0.3rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .confirmation-pop-up__decline {
+      font-size: $font-size-medium;
+      color: $color-black;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

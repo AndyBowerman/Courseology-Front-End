@@ -1,6 +1,11 @@
 @use "../../styles/variables" as *;
 
+.courses__search-bar {
+    width: 100%;
+}
+
 .courses__card-container {
     margin-top: 1.5rem;
     margin-bottom: 10rem;
+    width: 100%;
 }

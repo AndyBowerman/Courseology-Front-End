@@ -4,6 +4,9 @@ import ShortCourseTag from "../ShortCourseTag/ShortCourseTag";
 import { Link } from "react-router-dom";
 
 const Card = ({ id, img, title, info, duration, price, shortCourse }) => {
+  const formatNumber = (num) => {
+    return parseInt(num).toLocaleString();
+  };
   return (
     <div className="card">
       <div className="card__container--left">
@@ -16,7 +19,7 @@ const Card = ({ id, img, title, info, duration, price, shortCourse }) => {
       </div>      
       <div className="card__container--right">
         <p className="card__duration">{duration}</p>
-        <p className="card__price">{price}</p>
+        <p className="card__price">£{formatNumber(price)}</p>
         <Link to={`/course/${id}`}>
           <Button name="card__button" text="More Information" />
         </Link>

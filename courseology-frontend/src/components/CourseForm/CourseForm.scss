@@ -1,7 +1,8 @@
 @use "../../styles/variables" as *;
 
 .course-form {
-
+    width: 100%;
+ 
     &__container {
         display: flex;
         justify-content: center;
