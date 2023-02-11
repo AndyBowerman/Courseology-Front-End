@@ -2,8 +2,10 @@
 
 .card {
     display: flex;
+    flex-direction: column;
     background-color: $color-grey-light;
     justify-content: space-between;
+    align-items: center;
     min-width: 100%;
     margin: 1rem;
     margin-top: 0.5rem;
@@ -15,6 +17,7 @@
         .card__img {
             height: 10rem;
             width: 12rem;
+            display: none;
         }
     
         .card__text-container {
@@ -62,15 +65,14 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     .card__img {
-        display: none;
+        display: unset !important;
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
     .card {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
     }
 }

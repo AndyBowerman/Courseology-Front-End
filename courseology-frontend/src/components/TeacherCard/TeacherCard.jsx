@@ -12,7 +12,7 @@ const TeacherCard = ({ name, img, subject, info, id }) => {
             <h3 className="teacher-card__subject">{subject}</h3>
             <p className="teacher-card__background">{info}</p>
             <Link to={`/teacher/${id}`}>
-              <Button text="More Information" />
+              <Button text="View profile" />
             </Link>              
         </div>
     </div>

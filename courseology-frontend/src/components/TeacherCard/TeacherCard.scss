@@ -6,8 +6,9 @@
     border-bottom: 1px dashed $color-black;
 
     &__img {
-        height: 15rem;
-        width: 20rem;
+        height: 10rem;
+        width: 14rem;
+        display: none;
     }
 
     &__container {
@@ -33,15 +34,15 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (min-width: 580px) {
     .teacher-card__img {
-        height: 10rem;
-        width: 14rem;
+        display: unset;
     }
 }
 
-@media (max-width: 580px) {
+@media (min-width: 700px) {
     .teacher-card__img {
-        display: none;
+        height: 15rem;
+        width: 20rem;
     }
 }

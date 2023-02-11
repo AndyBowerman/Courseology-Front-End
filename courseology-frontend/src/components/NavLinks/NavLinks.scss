@@ -1,27 +1,33 @@
 @use "../../styles/variables.scss" as *;
 
 .nav-links {
-    list-style: none;
+  list-style: none;
 
-    &__item {
-        font-size: $font-size-small;
-        font-weight: $font-weight-bold;
-        letter-spacing: 0.3rem;
-        line-height: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: $color-blue-navy-dark;
-    }
+  &__item {
+    font-size: $font-size-small;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.3rem;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-blue-navy-dark;
+  }
 
-    &__link {
-        text-decoration: none;
-    }
+  &__link {
+    text-decoration: none;
+  }
 }
 
-@media(min-width: 550px) {
-    .nav-links__item {
-        font-size: $font-size-medium;
-        line-height: 4rem;
-    }
+@media (min-width: 550px) {
+  .nav-links__item {
+    font-size: $font-size-medium;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .nav-links {
+    margin: 1rem 0;
+  }
 }

@@ -2,14 +2,13 @@
 
 .short-course-tag {
     padding: 1px;
-    background-color: $color-green;
+    background-color: $color-turquoise;
     width: 8rem;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     &__text {
         color: $color-blue-navy-dark;
-        font-family: $font-primary;
         text-align: center;
     }
 }

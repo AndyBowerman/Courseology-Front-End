@@ -3,15 +3,16 @@
 .input-box {
     margin: 1.8rem;
     display: flex;
+    flex-direction: column;
 
     &__container {
-        width: 25%;
+        width: 100%;
         font-family: $font-primary;
         font-size: 1.3rem;
     }
 
     &__input {
-        width: 70%;
+        width: 100%;
         font-family: $font-primary;
         font-size: $font-size-small;
         border: none;
@@ -27,20 +28,19 @@
     height: 6rem;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 750px) {
     .input-box {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
         margin: 0.5rem;
 
         &__container {
-            width: 100%;
+            width: 30%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         &__input {
-            width: 90%;
+            width: 70%;
             margin: 0.5rem;
         }
     }

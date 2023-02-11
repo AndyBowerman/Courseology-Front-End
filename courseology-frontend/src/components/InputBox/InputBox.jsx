@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './InputBox.scss';
 
 const InputBox = ({labelText, inputType, inputName}) => {

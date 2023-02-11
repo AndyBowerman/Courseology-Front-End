@@ -60,7 +60,7 @@ const UpdateTeacher = () => {
     <Layout
       heading="Update Teacher"
       displayConfirmation={displayConfirmation}
-      message="Update the teacher's record?"
+      message="Update this teacher's record?"
       confirmationFunction={handleSubmit}
       cancelFunction={toggleDisplayConfirmation}
     >

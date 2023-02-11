@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home">
       <div className="home__dec"></div>
       <header className="home__header">
-        <Header heading="Coursology" />
+        <Header heading="Coursology" border={true} />
       </header>
       <main className="home__flex">
         <section className="home__cover--left">

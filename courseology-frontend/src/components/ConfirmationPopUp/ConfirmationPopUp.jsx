@@ -14,13 +14,13 @@ const ConfirmationPopUp = ({
             onClick={confirmationFunction}
             className="confirmation-pop-up__confirm"
           >
-            Yes
+            Confirm
           </button>
           <button
             onClick={cancelFunction}
             className="confirmation-pop-up__decline"
           >
-            No
+            Cancel
           </button>
         </div>
       </div>

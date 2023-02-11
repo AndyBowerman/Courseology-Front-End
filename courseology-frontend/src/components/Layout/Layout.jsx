@@ -18,7 +18,7 @@ const Layout = ({
       </aside>
       <div className="layout__container">
         <header className="layout__header">
-          <Header name="header__text header__text--large" heading={heading} />
+          <Header border={false} heading={heading} />
         </header>
         <main className="layout__main">{children}</main>
       </div>

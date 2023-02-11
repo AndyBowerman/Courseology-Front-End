@@ -12,36 +12,48 @@
 
   &__container {
     background-color: $color-white;
-    padding: 2rem 3rem;
-    font-size: $font-size-extra-large;
-    letter-spacing: 0.2rem;
-    border-radius: 0.2rem;
+    padding: 1rem;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    border-radius: 0.3rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 0.1rem $color-black solid;
     max-width: 30rem;
+
+    .confirmation-pop-up__container--btn {
+      margin-top: 1.5rem;
 
     .confirmation-pop-up__confirm {
       font-size: $font-size-medium;
-      background-color: $color-black;
+      background-color: $color-navy;
+      border: none;
       color: $color-white;
-      padding: 0 0.5rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 0.3rem;
       margin-right: 1rem;
-      margin-top: 1rem;
       cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .confirmation-pop-up__decline {
       font-size: $font-size-medium;
-      color: $color-black;
+      font-weight: $font-weight-bold;
+      color: $color-navy;
       background-color: transparent;
       border: none;
       cursor: pointer;
     }
+  }
+  }
+}
+
+@media (min-width: 600px) {
+  .confirmation-pop-up__container {
+    padding: 2rem;
   }
 }

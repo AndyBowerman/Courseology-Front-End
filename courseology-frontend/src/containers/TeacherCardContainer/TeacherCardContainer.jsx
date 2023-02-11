@@ -16,8 +16,8 @@ const TeacherCardContainer = () => {
         getTeachers()
     }, []);
 
-    const renderTeachers = teachers.map(item => {
-        return <TeacherCard key={item.id} id={item.id} name={item.name} img={item.profilePicture} subject={item.mainSubject} info={item.background} />
+    const renderTeachers = teachers.map(teacher => {
+        return <TeacherCard key={teacher.id} id={teacher.id} name={teacher.name} img={teacher.profilePicture} subject={teacher.mainSubject} info={teacher.background} />
     })
 
   return (
