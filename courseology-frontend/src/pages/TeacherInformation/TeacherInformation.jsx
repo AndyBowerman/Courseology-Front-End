@@ -36,7 +36,8 @@ const TeacherInformation = () => {
     getCourse();
   }, [teacher]);
 
-  const toggleDisplayConfirmation = () => setDisplayConfirmation(!displayConfirmation);
+  const toggleDisplayConfirmation = () =>
+    setDisplayConfirmation(!displayConfirmation);
 
   const handleDelete = async () => {
     await fetch(`http://localhost:8080/teacher/${teacherId}`, {
@@ -46,7 +47,13 @@ const TeacherInformation = () => {
   };
 
   return (
-    <Layout heading={teacher.name} displayConfirmation={displayConfirmation} message="Are you sure you want to remove this teachers record?" confirmationFunction={handleDelete} cancelFunction={toggleDisplayConfirmation}>
+    <Layout
+      heading={teacher.name}
+      displayConfirmation={displayConfirmation}
+      message="Are you sure you want to remove this teacher's record?"
+      confirmationFunction={handleDelete}
+      cancelFunction={toggleDisplayConfirmation}
+    >
       <TeacherDetails
         subject={teacher.subject}
         secondarySubject={teacher.secondarySubject}
@@ -58,7 +65,11 @@ const TeacherInformation = () => {
         <Link to={`/update-teacher/${teacherId}`}>
           <Button name="button__update" text="Update" />
         </Link>
-        <Button name="button__delete" func={toggleDisplayConfirmation} text="Delete" />
+        <Button
+          name="button__delete"
+          func={toggleDisplayConfirmation}
+          text="Delete"
+        />
         <Link to="/our-teachers">
           <Button text="Return to Our Teachers" />
         </Link>

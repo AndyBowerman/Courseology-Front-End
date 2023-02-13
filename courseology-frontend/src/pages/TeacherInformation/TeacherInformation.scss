@@ -3,12 +3,13 @@
 .teacher-information {
     margin-top: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-@media (max-width: 575px) {
+@media (min-width: 575px) {
     .teacher-information {
-        flex-direction: column;
+        flex-direction: row;
     }
 }

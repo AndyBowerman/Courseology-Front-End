@@ -15,6 +15,7 @@ const EditTeacher = ({
       />
       <textarea
         maxLength="230"
+        rows={5}
         className="edit-teacher__input"
         value={teacher.background}
         onChange={(e) => getUpdatedTeacher(2, e.target.value)}

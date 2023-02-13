@@ -1,51 +1,80 @@
 @use "../../styles/variables" as *;
 
 .teacher-details {
-    display: flex;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  border: 0.1rem solid $color-navy;
+  background-color: $color-white-smoke;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-    &__img {
-        height: 19rem;
-        width: auto;
-    }
+  &__img {
+    height: auto;
+    width: 100%;
+    position: relative;
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
-    &__container {
-        padding: 1rem;
-        font-family: $font-primary;
+  &__container {
+    width: 90%;
+    padding-right: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
 
-        .teacher-details__background {
-            font-family: $font-primary;
-            margin-bottom: 1rem;
-        }
-
-        .teacher-details__subject {
-            font-family: $font-primary;
-            font-size: 1.3rem;
-            margin: 2rem 0;
-        }
-
-        .teacher-details__link {
-            font-family: $font-primary;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-    }
+    .teacher-details__background {
+        margin-bottom: 1.5rem;
+        line-height: 1.5rem;
+      }
+  
+      .teacher-details__link {
+        font-size: $font-size-extra-small;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-navy;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+      }
+  }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 575px) {
     .teacher-details {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row-reverse;
 
         &__img {
-            width: 26rem;
+            width: 50%;
+        }
+
+        &__container {
+            width: 50%;
+            text-align: start;
+            margin-top: 0;
+
+            .teacher-details__link {
+                font-size: $font-size-small;
+            }
         }
     }
 }
 
-@media (max-width: 500px) {
-    .teacher-details__img {
-        height: 12rem;
-        width: 16rem;
+@media (min-width: 1150px) {
+    .teacher-details {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1350px) {
+    .teacher-details {
+        width: 70%;
+
+        &__link {
+            font-size: $font-size-medium !important;
+            letter-spacing: 0.1rem !important;
+        }
     }
 }

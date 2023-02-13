@@ -1,4 +1,3 @@
-import "./CreateCourse.scss";
 import Layout from "../../components/Layout/Layout";
 import CourseForm from "../../components/CourseForm/CourseForm";
 import { useState } from "react";
