@@ -55,7 +55,7 @@ const CourseInformation = () => {
       confirmationFunction={handleDelete}
       cancelFunction={toggleDisplayConfirmation}
     >
-      {teacher && <CourseDetails course={course} teacher={teacher} />}
+      <CourseDetails course={course} teacher={teacher ? teacher : false} />
       <div className="course-information__buttons">
         <Link to={`/update-course/${courseId}`}>
           <Button name="button__update" text="Update" />

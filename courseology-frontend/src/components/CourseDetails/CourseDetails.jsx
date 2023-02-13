@@ -31,11 +31,20 @@ const CourseDetails = ({ course, teacher }) => {
             Duration: {cleanDuration(duration)}
           </p>
         </div>
-        <h3 className="course-details__header">Course Leader</h3>
-        <div className="course-details__teacher">
-          <p className="course-details__name">{teacher.name}</p>
-          <Link className="course-details__link" to={`/teacher/${teacher.id}`}>Visit Profile</Link>
-        </div>
+        {teacher && (
+          <>
+            <h3 className="course-details__header">Course Leader</h3>
+            <div className="course-details__teacher">
+              <p className="course-details__name">{teacher.name}</p>
+              <Link
+                className="course-details__link"
+                to={`/teacher/${teacher.id}`}
+              >
+                Visit Profile
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
