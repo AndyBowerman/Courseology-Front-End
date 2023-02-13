@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import EditForm from "../../containers/EditForm/EditForm";
+import EditForm from "../../components/EditForm/EditForm";
 
 const UpdateCourse = () => {
   const [displayConfirmation, setDisplayConfirmation] = useState(false);
