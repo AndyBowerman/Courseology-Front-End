@@ -6,7 +6,7 @@ import CourseDetails from "../../components/CourseDetails/CourseDetails";
 import Button from "../../components/Button/Button";
 
 const CourseInformation = () => {
-  const [course, setCourse] = useState("");
+  const [course, setCourse] = useState({});
   const [displayConfirmation, setDisplayConfirmation] = useState(false);
   const [teacher, setTeacher] = useState("");
   const { courseId } = useParams();
@@ -14,7 +14,7 @@ const CourseInformation = () => {
 
   const getCourse = async () => {
     const response = await fetch(
-      `http://localhost:8080/courseById/${courseId}`
+      `https://andybowerman.com/courseById/${courseId}`
     );
     const courseData = await response.json();
     setCourse(courseData);
@@ -22,7 +22,7 @@ const CourseInformation = () => {
 
   const getTeacher = async () => {
     const response = await fetch(
-      `http://localhost:8080/teachersBySubject/${course.name}`
+      `https://andybowerman.com/teachersBySubject/${course.name}`
     );
     const teacherData = await response.json();
     setTeacher(teacherData[0]);
@@ -40,7 +40,7 @@ const CourseInformation = () => {
     setDisplayConfirmation(!displayConfirmation);
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:8080/course/${courseId}`, {
+    await fetch(`https://andybowerman.com/course/${courseId}`, {
       method: "DELETE",
     });
     navigate("/our-courses");

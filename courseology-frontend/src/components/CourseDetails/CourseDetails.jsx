@@ -21,7 +21,6 @@ const CourseDetails = ({ course, teacher }) => {
     <div className="course-details">
       <img src={img} alt={course.title} className="course-details__img" />
       <div className="course-details__container">
-        {shortCourse && <ShortCourseTag />}
         <p className="course-details__description">{description}</p>
         <div className="course-details__container--text">
           <p className="course-details__points">
@@ -30,6 +29,9 @@ const CourseDetails = ({ course, teacher }) => {
           <p className="course-details__points">
             Duration: {cleanDuration(duration)}
           </p>
+        </div>
+        <div className="course-details__short-course">
+          {shortCourse && <ShortCourseTag />}
         </div>
         {teacher && (
           <>

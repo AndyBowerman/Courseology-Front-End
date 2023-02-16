@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import AddTeacher from "./pages/AddTeacher/AddTeacher";
 import CreateCourse from "./pages/CreateCourse/CreateCourse";
 import Courses from "./pages/Courses/Courses";

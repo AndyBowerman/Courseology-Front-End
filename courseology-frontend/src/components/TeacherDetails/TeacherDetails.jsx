@@ -9,7 +9,7 @@ const TeacherDetails = ({ subject, background, img, courseId }) => {
         {courseId && (
           <a
             className="teacher-details__link"
-            href={`http://localhost:3000/course/${courseId}`}
+            href={`https://andybowerman.github.io/Courseology-Front-End/#/course/${courseId}`}
           >
             {subject}
           </a>

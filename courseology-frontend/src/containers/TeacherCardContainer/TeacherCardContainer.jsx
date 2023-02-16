@@ -7,7 +7,7 @@ const TeacherCardContainer = () => {
     const [teachers, setTeachers] = useState([]);
 
     const getTeachers = async () => {
-        const response = await fetch("http://localhost:5000/teachers");
+        const response = await fetch("https://andybowerman.com/teachers");
         const teacherData = await response.json();
         setTeachers(teacherData);
     }

@@ -24,7 +24,7 @@ const CreateCourse = () => {
   const cancelSubmit = () => setDisplayConfirmation(!displayConfirmation);
 
   const submitCourse = async () => {
-      await fetch("http://localhost:8080/course", {
+      await fetch("https://andybowerman.com/course", {
         method: "POST",
         headers: {
           Accept: "application/json",

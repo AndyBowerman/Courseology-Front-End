@@ -25,6 +25,7 @@
 
     .course-details__description {
       line-height: 1.5rem;
+      margin-top: 0.5rem;
     }
 
     &--text {
@@ -35,6 +36,11 @@
         font-size: 1.2rem;
         margin: 0 1rem;
       }
+    }
+
+    .course-details__short-course {
+      display: flex;
+      justify-content: center;
     }
 
     .course-details__header {
@@ -84,7 +90,7 @@
     flex-direction: row;
 
     &__img {
-      width: 50%;
+      width: 50% !important;
     }
 
     &__container {

@@ -22,7 +22,7 @@ const AddTeacher = () => {
   const cancelSubmit = () => setDisplayConfirmation(!displayConfirmation);
 
   const addTeacher = async () => {
-      await fetch("http://localhost:8080/teacher", {
+      await fetch("https://andybowerman.com/teacher", {
         method: "POST",
         headers: {
           Accept: "application/json",

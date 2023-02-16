@@ -15,7 +15,7 @@ const UpdateTeacher = () => {
 
   const getTeacher = async () => {
     const response = await fetch(
-      `http://localhost:8080/teacherById/${teacherId}`
+      `https://andybowerman.com/teacherById/${teacherId}`
     );
     const teacherData = await response.json();
     setTeacher(teacherData);
@@ -44,7 +44,7 @@ const UpdateTeacher = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:8080/teacher/${teacherId}`, {
+    const response = await fetch(`https://andybowerman.com/teacher/${teacherId}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",

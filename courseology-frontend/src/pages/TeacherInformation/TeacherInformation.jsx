@@ -14,7 +14,7 @@ const TeacherInformation = () => {
 
   const getTeacher = async () => {
     const response = await fetch(
-      `http://localhost:8080/teacherById/${teacherId}`
+      `https://andybowerman.com/teacherById/${teacherId}`
     );
     const teacherData = await response.json();
     setTeacher(teacherData);
@@ -26,7 +26,7 @@ const TeacherInformation = () => {
 
   const getCourse = async () => {
     const response = await fetch(
-      `http://localhost:8080/courseByName/${teacher.subject}`
+      `https://andybowerman.com/courseByName/${teacher.subject}`
     );
     const courseData = await response.json();
     setCourse(courseData);
@@ -40,7 +40,7 @@ const TeacherInformation = () => {
     setDisplayConfirmation(!displayConfirmation);
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:8080/teacher/${teacherId}`, {
+    await fetch(`https://andybowerman.com/teacher/${teacherId}`, {
       method: "DELETE",
     });
     navigate("/our-teachers");

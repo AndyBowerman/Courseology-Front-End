@@ -15,7 +15,7 @@ const UpdateCourse = () => {
 
   const getCourse = async () => {
     const response = await fetch(
-      `http://localhost:8080/courseById/${courseId}`
+      `https://andybowerman.com/courseById/${courseId}`
     );
     const courseData = await response.json();
     setCourse(courseData);
@@ -46,7 +46,7 @@ const UpdateCourse = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:8080/course/${courseId}`, {
+    const response = await fetch(`https://andybowerman.com/course/${courseId}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
